@@ -14,7 +14,7 @@
     },
     "main": "index.js",
     "scripts": {
-        "start": "tsnode src/app.tsx",
+        "start": "tsnode src/app.ts",
         "test": "tsnode src/test.js"
     },
     "keywords": [
