@@ -14,8 +14,8 @@
     },
     "main": "index.js",
     "scripts": {
-        "start": "./node_modules/.bin/tsnode build/index.js",
-        "test": "./node_modules/.bin/tsnode build/test.js"
+        "start": "./node_modules/.bin/tsnode src/app.tsx",
+        "test": "./node_modules/.bin/tsnode src/test.js"
     },
     "keywords": [
         "node",
