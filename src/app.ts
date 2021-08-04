@@ -6,7 +6,7 @@ app.use(express.static('public'))
 
 console.log("app:", app)
 
-const port = 8989
+const port = 80
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
