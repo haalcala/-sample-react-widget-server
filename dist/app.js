@@ -7,9 +7,6 @@ var app = express();
 app.use(express.static('public'));
 console.log("app:", app);
 var port = process.env.PORT || 80;
-app.listen(port, function () {
-    console.log("Example app listening at http://localhost:" + port);
-});
 var server = app.listen(port, console.log("Server is running on the port no: " + (port) + " "));
 var io = socket(server);
 //initializing the socket io connection 
