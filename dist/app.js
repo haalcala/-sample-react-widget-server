@@ -35,11 +35,17 @@ io.on("connection", function (socket) {
     socket.on("chat", function (text) {
         //gets the room user and the message sent
         var p_user = get_Current_User(socket.id);
-        io.to(p_user.room).emit("message", {
-            userId: p_user.id,
-            username: p_user.username,
-            text: text
-        });
+        console.log("socket.id:", socket.id, "p_user:", p_user);
+        if (p_user) {
+            io.to(p_user.room).emit("message", {
+                userId: p_user.id,
+                username: p_user.username,
+                text: text
+            });
+        }
+        else {
+            socket.emit("unkown_user");
+        }
     });
     //when the user exits the room
     socket.on("disconnect", function () {
